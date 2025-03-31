@@ -1,0 +1,15 @@
+# Ignore all .log files
+*.log
+
+# Ignore the node_modules folder
+node_modules/
+raycast/
+raycast.old/
+
+# Ignore all files in the temp directory
+temp/
+raycast/
+raycast.old/
+
+# Ignore all .env files
+*.env
