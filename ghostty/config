@@ -1,0 +1,24 @@
+#foreground = c0caf5
+#background = 000000
+
+theme = catppuccin-mocha.conf
+
+window-decoration = true
+#background-opacity = 0.9
+
+#cursor-style = block
+#cursor-style-blink = false
+#shell-integration-features = no-cursor
+
+# disable all font ligatures
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+font-size = 16
+font-family = "Hack Nerd Font"
+font-family-bold = "Hack Nerd Font"
+font-family-italic = "Iosevka Nerd Font"
+font-family-bold-italic = "Iosevka Nerd Font"
+
+#confirm-close-surface = false

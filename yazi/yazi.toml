@@ -1,0 +1,21 @@
+[manager]
+ratio = [1, 2, 3]
+sort_dir_first = true
+show_symlink = true
+show_hidden=true
+
+
+[preview]
+max_width = 1000
+image_quality = 70
+
+[opener]
+open = [
+	{ run = 'xdg-open "$@"', block = false, desc = "Open" },
+]
+
+[open]
+prepend_rules = [
+    { mime = "video/*", use = "open" },
+]
+
