@@ -53,6 +53,8 @@ alias ...='cd ../..'
 alias conf-zsh='micro ~/.zshrc'
 alias conf-fetch='micro ~/.config/fastfetch/config.jsonc'
 alias reload='source ~/.zshrc && echo "Zsh reloaded!"'
+alias dot-push='cd ~/dotfiles && git add . && git commit -m "Update: $(date)" && git push'
+
 
 # 6) Fastfetch (interactive-only)
 if [[ -o interactive ]] && command -v fastfetch &>/dev/null; then
