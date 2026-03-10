@@ -1,0 +1,61 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "padding": {
+      "top": 1,
+      "left": 2
+    },
+    "color": {
+      "1": "38;2;203;166;247", // Mauve
+      "2": "38;2;137;180;250"  // Blue
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "38;2;203;166;247",
+      "title": "38;2;180;190;254"
+    },
+    "bar": {
+      "charElapsed": "",
+      "charTotal": " ",
+      "width": 12
+    }
+  },
+  "modules": [
+    "break",
+    "break",
+    "break",
+    {
+      "type": "title",
+      "color": {
+        "user": "38;2;137;180;250",
+        "at": "38;2;243;139;168",
+        "host": "38;2;245;224;220"
+      }
+    },
+    "separator",
+    { "type": "os",       "key": "󰣚 OS      ", "keyColor": "38;2;203;166;247" },
+    { "type": "kernel",   "key": "󰌽 Kernel  ", "keyColor": "38;2;137;180;250" },
+    { "type": "uptime",   "key": "󰅐 Uptime  ", "keyColor": "38;2;249;226;175" },
+    { "type": "packages", "key": "󰏖 Packages", "keyColor": "38;2;250;179;135" },
+    { "type": "shell",    "key": "󱆃 Shell   ", "keyColor": "38;2;166;227;161" },
+    "break",
+    { 
+      "type": "memory",  
+      "key": "󰾆 Memory  ", 
+      "keyColor": "38;2;243;139;168",
+      "format": "{1} / {2} ({3}) {4}" 
+    },
+    { 
+      "type": "disk",    
+      "key": "󰋊 Disk    ",   
+      "keyColor": "38;2;249;226;175",
+      "format": "{1} / {2} ({3}) {4}"
+    },
+    { "type": "localip", "key": "󰩟 IP      ", "keyColor": "38;2;137;220;235" },
+    "break",
+    { "type": "colors", "symbol": "circle", "paddingLeft": 2 }
+  ]
+}

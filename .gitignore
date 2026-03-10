@@ -1,0 +1,13 @@
+# Ignore caches & runtime
+**/cache/
+**/Cache/
+**/logs/
+*.log
+
+# Ignore obvious private dirs
+**/keys/
+**/secrets/
+ssh/
+ssh/*
+id_rsa*
+id_ed25519*

@@ -1,0 +1,11 @@
+{
+    "colorscheme": "mocha",
+    "truecolor": true,
+    "cursorline": true,
+    "gutter": true,
+    "tabsize": 4,
+    "softwrap": true,
+    "mkparents": true,
+    "savecursor": true,
+    "saveundo": true
+}

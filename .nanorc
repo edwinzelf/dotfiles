@@ -1,0 +1,12 @@
+# Include the Mocha theme
+include "~/.config/nano/themes/mocha.nanorc"
+
+# UI Improvements
+unset linenumbers
+set softwrap
+set tabsize 4
+set titlecolor "brightwhite,magenta"
+set statuscolor "brightwhite,magenta"
+
+# Ensure mouse is OFF so you can select text easily
+unset mouse
