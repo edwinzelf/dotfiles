@@ -1,6 +1,11 @@
 # ~/.zshrc - Catppuccin Mocha (cleaned & fixed)
 # ------------------------------------------------------------------------------
 
+# Ensure we are actually in Zsh
+if [ -n "$BASH_VERSION" ]; then
+    exec zsh
+fi
+
 # 0) Basic options
 setopt PROMPT_SUBST            # allow variable/command expansion in PROMPT
 setopt appendhistory sharehistory

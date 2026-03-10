@@ -138,16 +138,26 @@ install_git_clone_if_missing "zsh-users/zsh-history-substring-search" "${HOME}/.
 install_git_clone_if_missing "zsh-users/zsh-autosuggestions" "${HOME}/.zsh-autosuggestions"
 install_git_clone_if_missing "zsh-users/zsh-syntax-highlighting" "${HOME}/.zsh-syntax-highlighting"
 
-# Optional: make zsh the login shell for the current user (safe prompt)
-if [ "$(id -u)" -ne 0 ]; then
-  if [ -n "${SHELL-}" ] && [ "$(basename "${SHELL}")" != "zsh" ]; then
-    if command -v chsh >/dev/null 2>&1; then
-      log "You can change your login shell to zsh with: chsh -s $(command -v zsh)"
+# --- Ensure Zsh is the Login Shell ---
+CURRENT_SHELL=$(getent passwd "$USER" | cut -d: -f7)
+ZSH_PATH=$(command -v zsh)
+
+if [ "$CURRENT_SHELL" != "$ZSH_PATH" ]; then
+    log "Changing login shell to zsh for $USER..."
+    # If running as root, we can change it directly
+    if [ "$(id -u)" -eq 0 ]; then
+        chsh -s "$ZSH_PATH" root
+    else
+        # If running as a normal user, we use sudo
+        sudo chsh -s "$ZSH_PATH" "$USER"
     fi
-  fi
+    log "Login shell changed to zsh. Please log out and back in for changes to take effect."
 else
-  log "Running as root; skipping automatic chsh."
+    log "Zsh is already the default login shell."
 fi
+
+
+
 
 # Git init & commit (idempotent)
 cd "${DOTDIR}"
