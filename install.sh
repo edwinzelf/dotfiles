@@ -65,6 +65,11 @@ run_bootstrap() {
     log "All packages already installed."
   fi
 
+  # Update command-not-found database if installed
+  if command -v update-command-not-found >/dev/null 2>&1; then
+      sudo update-command-not-found
+  fi
+  
   # Optional extras: install micro plugin manager or other extras here if desired
   log "Bootstrap complete."
 }
