@@ -3,7 +3,7 @@ set -euo pipefail
 
 DOTDIR="${HOME}/dotfiles"
 BACKUP_DIR="${DOTDIR}/backups/$(date -u +%Y%m%dT%H%M%SZ)"
-PACKAGES=(git curl wget zsh fzf micro nano bat btop fastfetch jq htop fortune-mod cowsay)
+PACKAGES=(git curl wget zsh fzf micro nano bat btop fastfetch jq htop sudo zoxide command-not-found)
 BOOTSTRAP=false
 PUSH_REMOTE=false
 USE_GH_CREATE=false
