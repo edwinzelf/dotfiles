@@ -63,7 +63,7 @@ alias dot-push='cd ~/dotfiles && git add . && git commit -m "Update: $(date)" &&
 
 # 6) Fastfetch (interactive-only)
 if [[ -o interactive ]] && command -v fastfetch &>/dev/null; then
-  clear
+  # clear
   fastfetch
 fi
 
